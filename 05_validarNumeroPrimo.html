@@ -4,9 +4,14 @@
     PROBLEMA
     Faça um programa que peça para o usuário informar um número. Identifique se o número fornecido pelo usuário é um número primo e apresente na tela.
     */
+    let number = Number(prompt('Informe um número:'));
+    let primo = [];
 
     //ENTRADA
-    let primo = [];
-   
+    for (let index = 2; index < number; index++) {
+        primo.push(number%index);        
+    }
+    if(primo.includes(0) === false) alert('Número primo!')
+    else alert('Não é primo!')
     //SAÍDA
 </script>
