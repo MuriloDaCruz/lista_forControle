@@ -7,14 +7,14 @@
     */
 
     //ENTRADA
-    const Notas = prompt('Professor, me informe quantas notas o aluno obteve: ')
-
+    let notas = Number(prompt('Professor, me informe quantas notas o aluno obteve: '))
+    let soma = 0    
     //PROCESSAMENTO
-    for (let index = []; index.length <= Nota; index++) {
-        const element = array[index];
-        
+    for (let index = 1; index <= notas; index++) {
+        let qualNota = Number(prompt('Informe a nota da prova:').replace(',','.'));
+        soma += qualNota
     }
-
+    let media = soma/notas
     //SAÍDA
-
+    alert(`A média do aluno é: ${media}`)
 </script>

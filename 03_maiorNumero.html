@@ -7,11 +7,16 @@
     */
 
     //ENTRADA
-
-
+    let valor = []
+    let maior = 0
     //PROCESSAMENTO
+    for (let index = 1; index < 5; index++) {
+        let numbers = Number(prompt('Informe um número:'));
+        valor.push(numbers)
+        valor.sort((a, b) => a-b)
+        maior = valor[valor.length - 1]
 
-
+    }
     //SAÍDA
-
+    alert(`O maior número é: ${maior}`);
 </script>
