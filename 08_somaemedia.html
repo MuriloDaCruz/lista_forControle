@@ -6,11 +6,15 @@
     */
 
     //ENTRADA
-
+    let media = 0
+    let soma = 0
 
     //PROCESSAMENTO
-
-
+    for (let index = 1; index <= 5; index++) {
+        let numeros = Number(prompt(`Informe um número:`).replace(",", "."));
+        soma += numeros
+    }
+    media = soma / 5
     //SAÍDA
-
+    alert(`A soma dos números é ${soma} \nE a média é ${media}.`)
 </script>

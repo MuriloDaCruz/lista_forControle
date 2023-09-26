@@ -6,11 +6,16 @@
     */
 
     //ENTRADA
-
-    
+    let cinco = 0
+    let dez = 0
     //PROCESSAMENTO
-    
+    for (let index = 1; index <= 5; index++) {
+        cinco += 50000 * 1.015
+    }
+    for (let index = 1; index <= 10; index++) {
+        dez += 50000 * 1.015
+    }
 
     //SAÍDA
-
+    alert(`A população prevista para um prazo de 5 anos será de ${Math.round(cinco)} habitantes. \n A população prevista para um prazo de 10 anos será de ${Math.round(dez)} habitantes.`)
 </script>
