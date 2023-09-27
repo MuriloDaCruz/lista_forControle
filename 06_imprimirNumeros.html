@@ -15,12 +15,10 @@
         if (numeroInicial < numeroFinal) {
             if (index % 2 == 0) par.push(index)
             else if (index % 2 != 0) impar.push(index)
-            alert(`Os numeros impares que estão entre os dois números são: \n ${impar.join(', ')} \n E os pares são: ${par.join(', ')}`)
         }
     }
-    if (numeroInicial >= numeroFinal) {
-        alert(`ERRO! O número inicial deve ser menor que o número final!`)
-    }
+    if (numeroInicial >= numeroFinal) alert(`ERRO! O número inicial deve ser menor que o número final!`)
+    else if(numeroFinal > numeroInicial) alert(`Os numeros impares que estão entre os dois números são: \n ${impar.join(', ')} \n E os pares são: ${par.join(', ')}`)
 
     //SAÍDA
 

@@ -8,11 +8,40 @@
     */
 
     //ENTRADA
-
-
+    let candidatos = [];
+    let votosTotais = [];
+    let votos1 = 0;
+    let votos2 = 0;
+    let votos3 = 0;
+    for(let index = 1; index <= 3; index++){
+       let QuaisCandidatos = prompt(`Qual o nome dos candidatos a serem eleitos?`);
+       candidatos.push(QuaisCandidatos.toUpperCase())
+    }
+    let votantes = Number(prompt(`Qual a quantidade de alunos que votaram?`));
+    for(let votos = 1; votos <= votantes; votos++){
+        let votoReitor = Number(prompt(`O voto para REITOR de cada aluno foi para quem? \n1 para ${candidatos[0]}; 2 para ${candidatos[1]}; 3 para ${candidatos[2]}`))
+        votosTotais.push(votoReitor);
+    }
+    for(let contagem = 0; contagem < votantes; contagem++)
+    if(votosTotais.includes(1) == true){
+            votos1 ++
+        }
+    else if(votosTotais.includes(2) ==true){
+            votos2 ++
+        }
+    else if(votosTotais.includes(3) == true){
+            votos3 ++       
+        }
+    if(votos1 > votos2 && votos1 > votos3){
+        alert(`O ganhador foi ${candidatos[0]} com ${votos1} votos, que resultou em ${votos1/(votos1+votos2+votos3)*100}% dos votos`);
+    }
+    else if(votos2 > votos1 && votos2 > votos3){
+        alert(`O ganhador foi ${candidatos[1]} com ${votos2} votos, que resultou em ${votos2/(votos1+votos2+votos3)*100}% dos votos`);
+    }
+    else if(votos3 > votos1 && votos3 > votos2){
+        alert(`O ganhador foi ${candidatos[2]} com ${votos2} votos, que resultou em ${votos3/(votos1+votos2+votos3)*100}% dos votos`);
+    }
     //PROCESSAMENTO
-
-
+    
     //SAÍDA
-
 </script>
